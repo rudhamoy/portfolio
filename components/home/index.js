@@ -17,6 +17,10 @@ const Home = () => {
                     <p className="">Elevate Brands </p>
                     <p>to captivate people</p>
                     <p className="text-lg py-4">Strategic design and marekting, Connect your brand with your audiences to get results</p>
+                    <p>Hello</p>
+                    <p>Add me to git hub </p>
+                    <p>Hello</p>
+                    <p>Hello</p>
                     </div>
                 </div>
             </div>
