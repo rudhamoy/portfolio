@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import Navigation from '../components/Navigations'
 import HomePage from '../components/home'
 import Services from '../components/services'
+import Process from '../components/process'
+import Contact from '../components/contact'
 
 export default function Home() {
   return (
@@ -17,12 +19,19 @@ export default function Home() {
       <div className="snap-y snap-mandatory h-screen overflow-scroll bg-zinc-800">
         <div className="sticky top-0">
           <Navigation />
-          </div>
+        </div>
         <div className="snap-start">
           <HomePage />
         </div>
         <div className="snap-start">
           <Services />
+        </div>
+        <div className="snap-start">
+          <Process />
+        </div>
+        <div className="snap-start bg-purple-800">
+          <Contact />
+         
         </div>
       </div>
     </>
