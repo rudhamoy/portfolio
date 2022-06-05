@@ -19,9 +19,9 @@ const Contact = () => {
         </div>
 
         <div className="flex gap-x-3">
-        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full">Intro</button>
-        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full">Services</button>
-        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full">Process</button>
+        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full text-white">Intro</button>
+        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full text-white">Services</button>
+        <button className="my-10 p-3 px-6 hover:bg-gray-50 hover:text-purple-800 font-semibold font-[monospace] text-sm border rounded-full text-white">Process</button>
         </div>
       </div>
 

@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="absolute bg-red-500 opacity-40 filter bg-blend-luminosity blur-3xl rounded-full w-[30%] h-[60%] -left-24 -bottom-32"></div>
                 </>
                 {/* circle */}
-                <div className="flex justify-center absolute right-[4%] top-[26%] z-10">
+                <div className="flex justify-center absolute right-[4%] top-[26%]">
                     <div className="z-30 flex justify-center h-[300px] w-[300px] rounded-full border-2 border-gray-500 my-4 relative">
                     <p className="absolute left-5 bottom-2 text-sm font-semibold text-gray-100 flex flex-col items-center">
                         <span className="p-2 w-2 rounded-full bg-purple-900 "></span>Strategy
