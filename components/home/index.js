@@ -1,18 +1,37 @@
-import React from 'react'
-import Navigation from '../Navigations'
+import React, {useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const Home = () => {
+    const [ref, inView ] = useInView()
+    const animation = useAnimation()
+
+    useEffect(() => {
+        if(inView) {
+            animation.start({
+                x: 0,
+               
+            })
+        }
+
+        if(!inView) {
+            animation.start({
+                x: '-100vw'
+            })
+        }
+    }, [inView])
+
     return (
         <>
-            <div className="h-[100vh]  relative overflow-hidden">
+            <div  className="h-[100vh]  relative overflow-hidden">
                 {/* <Navigation /> */}
                 {/* GRadient color */}
-                <>
-                    <div className="absolute bg-indigo-400 opacity-30 filter bg-blend-luminosity blur-3xl rounded-full w-[65%] h-[100%] -left-60 -bottom-10">
-                    </div>
-                    <div className="absolute bg-purple-800 opacity-50 filter  blur-3xl rounded-full w-[60%] h-[90%] -bottom-32"></div>
-                    <div className="absolute bg-red-500 opacity-40 filter bg-blend-luminosity blur-3xl rounded-full w-[30%] h-[60%] -left-24 -bottom-32"></div>
-                </>
+                <div ref={ref}>
+                    <motion.div animate={animation} transition={{duration: 0.6}} className="absolute bg-indigo-400 opacity-30 filter bg-blend-luminosity blur-3xl rounded-full w-[65%] h-[100%] -left-60 -bottom-10">
+                    </motion.div>
+                    <motion.div animate={animation} transition={{duration: 1.1}} className="absolute bg-purple-800 opacity-50 filter  blur-3xl rounded-full w-[60%] h-[90%] -bottom-32"></motion.div>
+                    <motion.div animate={animation} transition={{duration: 1.5}} className="absolute bg-red-500 opacity-40 filter bg-blend-luminosity blur-3xl rounded-full w-[30%] h-[60%] -left-24 -bottom-32"></motion.div>
+                </div>
                 {/* circle */}
                 <div className="flex justify-center absolute right-[4%] top-[26%]">
                     <div className="z-30 flex justify-center h-[300px] w-[300px] rounded-full border-2 border-gray-500 my-4 relative">
