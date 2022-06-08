@@ -22,17 +22,17 @@ export default function Home() {
           <SideNav />
         </div>
           {/* <SideNav /> */}
-      <div className="snap-y snap-mandatory h-screen w-[100vw] overflow-scroll bg-zinc-800 ">
-        <div className="sticky top-0">
+        <div className="absolute w-full top-0 z-50">
           <Navigation />
         </div>
-        <div className="snap-start">
+      <div className="snap-y snap-mandatory h-screen w-[100vw] overflow-scroll bg-zinc-800 ">
+        <div className="snap-start h-[100vh]">
           <HomePage />
         </div>
-        <div className="snap-start">
+        <div className="snap-start h-[100vh]">
           <Services />
         </div>
-        <div className="snap-start">
+        <div className="snap-start h-[100vh]">
           <Process />
         </div>
         <div className="snap-start bg-purple-800">

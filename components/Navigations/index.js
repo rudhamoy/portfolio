@@ -2,7 +2,7 @@ import React from 'react'
 
 const Index = () => {
   return (
-    <div className="flex justify-between items-center py-10 px-12">
+    <div className="flex justify-between w-full items-center py-10 px-12">
       {/* logo */}
       <div>
         <h1 className="text-gray-50 text-3xl font-[monospace]">Rudhamoy</h1>
