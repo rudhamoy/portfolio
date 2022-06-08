@@ -59,13 +59,23 @@ const Services = () => {
         </div>
       </div>
       <div className="flex justify-center text-center text-gray-50">
-        <motion.div animate={textAnimation} className="mt-32 font-bold text-7xl font-[monospace] z-30">
+        <motion.div 
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: false, amount: 1 }}
+        transition={{
+            staggerChildren: 0.2,
+        }}
+         className="mt-32 font-bold text-7xl font-[monospace] z-30">
+           <motion.div variants={textAnimate}>
           <h1>My <span className={`${classes.services__transparent} text-7xl`}>services</span> include<br /> </h1>
           <p>web-development,</p>
-          <p className="-ml-16 flex items-center gap-x-5">social paid ads,<span className='text-xs text-left w-[210px]'>hopstic creative solutions for on brand messaging across any platform.</span></p>
+          <p className="-ml-16 flex items-center gap-x-5">social paid ads,<motion.span variants={textAnimate} className='text-xs text-left w-[210px]'>hopstic creative solutions for on brand messaging across any platform.</motion.span></p>
           <p className="">digital marketing,</p>
           <p>seo and google ads</p>
           <button className="my-10 p-3 px-6 font-semibold font-[monospace] text-sm border rounded-full">View Services</button>
+
+           </motion.div>
         </motion.div>
       </div>
       </div>
