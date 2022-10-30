@@ -32,25 +32,25 @@ const Home = () => {
         }
     }
 
-    useEffect(() => {
-        if (inView) {
-            animationText.start(textAnimate.onscreen)
-            animation.start({
-                x: 0
-            })
-        }
-        if (!inView) {
-            animationText.start(textAnimate.offscreen)
-            animation.start({
-                x: "-100vw"
-            })
-        }
+    // useEffect(() => {
+    //     if (inView) {
+    //         animationText.start(textAnimate.onscreen)
+    //         animation.start({
+    //             x: 0
+    //         })
+    //     }
+    //     if (!inView) {
+    //         animationText.start(textAnimate.offscreen)
+    //         animation.start({
+    //             x: "-100vw"
+    //         })
+    //     }
 
-    }, [inView])
+    // }, [inView])
 
     return (
-        <div className="h-[100%]  overflow-hidden relative ">
-            <div ref={ref} className="py-8">
+        <div className="h-[100%] relative">
+            <div ref={ref} className="py-8 h-[100%] sm:h-0">
                 {/* GRadient color */}
                 <div>
                     <motion.div animate={animation} transition={{ duration: 0.6 }} className="absolute bg-indigo-400 opacity-5 filter bg-blend-luminosity blur-3xl rounded-full w-[65%] h-[100%] -left-60 -bottom-10">
@@ -59,18 +59,18 @@ const Home = () => {
                     <motion.div animate={animation} transition={{ duration: 1.5 }} className="absolute bg-red-500 opacity-40 filter bg-blend-luminosity blur-3xl rounded-full w-[30%] h-[60%] -left-24 -bottom-32"></motion.div>
                 </div>
                 {/* circle */}
-                <div className="flex justify-center absolute right-[4%] top-[26%] z-30">
+                <div className="flex justify-center absolute right-[4%] top-[18%] sm:top-[26%] z-30">
                     <div className="z-30 flex justify-center h-[300px] w-[300px] rounded-full border-2 border-gray-500 my-4 relative">
-                        <p className="absolute left-5 bottom-2 text-sm font-semibold text-gray-100 flex flex-col items-center">
+                        <p className="absolute left-12 sm:bottom-0 text-sm font-semibold text-gray-100 flex flex-col items-center font-[monospace]">
                             <span className="p-2 w-2 rounded-full bg-purple-900 "></span>Strategy
                         </p>
                         <div className="z-30 flex justify-center h-[230px] w-[230px] rounded-full border-2 border-gray-500 my-4 relative">
-                            <p className="absolute right-10 text-sm font-semibold text-gray-100 flex flex-col items-center">
+                            <p className="absolute right-10 text-sm font-semibold text-gray-100 flex flex-col items-center font-[monospace]">
                                 <span className="p-2 w-2 rounded-full bg-purple-900"></span>
                                 Website
                             </p>
                             <div className=" flex justify-center items-center h-[140px] w-[140px] rounded-full border-2 border-gray-500 my-4 relative">
-                                <p className="absolute -right-1 -bottom-2 text-sm font-semibold text-gray-100 flex flex-col items-center">
+                                <p className="absolute -right-2 -bottom-2 text-sm font-semibold text-gray-100 flex flex-col items-center font-[monospace]">
                                     <span className="p-2 w-2 rounded-full bg-purple-900"></span>Marketing
                                 </p>
                                 <p className="font-semibold font-[monospace] text-gray-100">Success</p>
@@ -78,27 +78,29 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
                 {/* Copy Writing */}
                 <div
-                    className="flex justify-center mt-[18%] text-gray-50 text-7xl font-semibold font-[monospace] z-50">
+                    className="flex justify-center items-center mt-[18%] text-gray-50 text-4xl sm:text-7xl font-semibold font-[monospace] z-50 h-[100%]">
                     <motion.div
-                        initial={"offscreen"}
-                        whileInView={"onscreen"}
-                        viewport={{ once: false, amount: 1 }}
-                        transition={{
-                            staggerChildren: 0.2,
-                        }}
+                        // initial={"offscreen"}
+                        // whileInView={"onscreen"}
+                        // viewport={{ once: false, amount: 1 }}
+                        // transition={{
+                        //     staggerChildren: 0.2,
+                        // }}
                         className="text-center">
-                        <motion.div variants={textAnimate}>
+                        {/* <motion.div variants={textAnimate}> */}
+                        <motion.div>
                             <p className="">Elevate Brands </p>
-                            <p>to captivate people</p>
+                            <p className=''>to captivate people</p>
                         </motion.div>
-                        <motion.div variants={textAnimate} className="flex justify-center">
-                            <p className="text-lg py-4 w-[470px] text-center">Strategic design and marekting, Connect your brand with your audiences to get results</p>
+                        <motion.div className="flex justify-center">
+                            <p className="text-sm sm:text-lg  py-4 sm:w-[470px] text-center">Strategic design and marketing, Connect your brand with your audiences to get results</p>
                         </motion.div>
-
                     </motion.div>
                 </div>
+
             </div>
         </div>
     )
